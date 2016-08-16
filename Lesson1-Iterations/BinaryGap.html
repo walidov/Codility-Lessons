@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson 1: Iterations | Task 1: BinaryGap</title>
+	<script type="text/javascript">
+		function solution(N) {
+			var arr = N.toString(2).split("");
+			var ones = [];
+			for(var x = 0; x < arr.length; x++) {
+				if (arr[x] == 1) {
+					ones.push(x);
+				}
+			}
+			var max = 0;
+			for(var i = 0; i < ones.length; i++) {
+				if(ones[i+1] - ones[i] > max && ones[i+1] - ones[i] > 1) {
+					max = ones[i+1] - ones[i] - 1;
+				}
+			}
+			return(max);
+		}
+		console.log(solution(1041));
+	</script>
+</head>
+<body>
+	<h1>Lesson 1: Iterations | Task 1: BinaryGap</h1>
+	<h2>Check your console for the result.</h2>
+	<h3>Hint: Press F12</h3>
+</body>
+</html>

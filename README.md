@@ -1,2 +1,3 @@
 # Codility-Lessons
-My answers to Codility.com lesson tasks, https://codility.com/programmers/lessons/
+My answers to Codility.com lesson tasks written in JavaScript.
+https://codility.com/programmers/lessons/
