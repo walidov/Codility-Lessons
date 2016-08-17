@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson 3: Time Complexity | Task 3: PermMissingElem</title>
+	<script type="text/javascript">
+		function solution(A) {
+			if(A.length == 0) return 1;
+			if(A.length == 1) {
+				return (A[0] == 1) ? 2 : 1;
+			}
+			A.sort(function(a,b){return a - b});
+			if(A.length == 2) {
+				if (A[0] == 2) return 1;
+				if (A[1] == 3) return 2;
+				return 3;
+			}
+			for(var n = 0; n < A.length; n++) {
+				if(A[n + 1] - A[n] > 1) {
+					return(A[n] + 1);
+				}
+			}
+			return (A[0] == 1) ? (A[A.length - 1] + 1) : 1;
+		}
+		console.log(solution([1,2,3,4,5]));
+	</script>
+</head>
+<body>
+	<h1>Lesson 3: Time Complexity | Task 3: PermMissingElem</h1>
+	<h2>Check your console for the result.</h2>
+	<h3>Hint: Press F12</h3>
+</body>
+</html>
