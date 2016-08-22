@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson 2: Arrays | Task 1: CyclicRotation</title>
+	<script type="text/javascript">
+		function solution(A, K) {
+		    if(K == 0) return A;
+		    if(A.length > 0) {
+		        for(var i = 0; i < K; i++) {
+		            var last = A.pop();
+		            A.unshift(last);
+		        }
+		        return A;
+		    }
+		    return A;
+		}
+		console.log(solution([3, 8, 9, 7, 6], 3));
+	</script>
+</head>
+<body>
+	<h1><a href="https://codility.com/programmers/task/cyclic_rotation/" target="_blank">Lesson 2: Arrays | Task 1: CyclicRotation</a></h1>
+	<h2>Check your console for the result.</h2>
+	<h3>Hint: Press F12</h3>
+</body>
+</html>
